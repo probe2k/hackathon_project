@@ -1,11 +1,13 @@
 import React from 'react';
 import Login from './Login';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const Main = () => {
-    <Routes>
-        <Route exact path="/" component={Login} />
-    </Routes>
-}
+const Main = () => (
+    <Router>
+        <Routes>
+            <Route exact path="/" element={<Login />} />
+        </Routes>
+    </Router>
+);
 
 export default Main;
