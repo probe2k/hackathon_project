@@ -1,36 +1,11 @@
-import styled from 'styled-components';
+import React, { Component } from 'react';
 
-const Login = (props) => {
-    return (
-        <Container>
-            <Nav>
-                <a href="/">Click Check</a>
-            </Nav>
-        </Container>
-    );
-}
-
-const Container = styled.div`
-    padding: 0px;
-`;
-
-const Nav = styled.div`
-    max-width: 1128px;
-    margin: auto;
-    padding: 12px 0 16px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-
-& > a {
-    width: 135px;
-    height: 34px;
-    @media (max-width: 768px) {
-        padding: 0 5px;
+class Login extends Component {
+    render() {
+        return(
+            <div>Hello world</div>
+        );
     }
 }
-`;
 
 export default Login;
