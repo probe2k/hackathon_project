@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './setting.css';
 class Settings extends Component {
     render() {
         return(
