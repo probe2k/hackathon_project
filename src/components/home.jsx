@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
+import { Navigate } from "react-router";
 import styled from "styled-components";
 import Left from "./Left";
 import Main from "./Main";
@@ -64,7 +64,7 @@ const Layout = styled.div`
 function Home(props) {
 	return (
 		<Container>
-			{!props.user && <Redirect to="/" />}
+			{!props.user && <Navigate to="/" />}
 			<Content>
 				<Section>
 					<h5>
