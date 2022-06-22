@@ -7,6 +7,7 @@ import { auth } from "./firebase";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Login from "./Login";
+import Register from "./Register";
 
 function App() {
   const userState = useSelector(selectUser);
