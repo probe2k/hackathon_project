@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Feed.css";
 import CreateIcon from "@material-ui/icons/Create";
-import ImageIcon from "@material-ui/icons/Image";
-import InputOption from "./InputOption";
 import Post from "./Post";
 import { db } from "./firebase";
 import firebase from "firebase";
@@ -57,10 +55,6 @@ const Feed = () => {
               Send
             </button>
           </form>
-        </div>
-
-        <div className="feed__inputOptions">
-          <InputOption title="Photo" Icon={ImageIcon} color="#70B5F9" />
         </div>
       </div>
 

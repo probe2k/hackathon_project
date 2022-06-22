@@ -1,7 +1,5 @@
 import React, { forwardRef } from "react";
 import { Avatar } from "@material-ui/core";
-import InputOption from "./InputOption";
-import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import "./Post.css";
 
 const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
@@ -20,9 +18,9 @@ const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
         <p>{message}</p>
       </div>
 
-      <div className="post__buttons">
+      {/* <div className="post__buttons">
         <InputOption Icon={ThumbUpAltOutlinedIcon} title="Like" color="gray" />
-      </div>
+      </div> */}
     </div>
   );
 });

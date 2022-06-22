@@ -23,7 +23,7 @@ const Header = () => {
       </div>
 
       <div className="header__right">
-        <HeaderOption title="Me" onClick={logoutHandler} avatar={true} />
+        <HeaderOption title="Logout" onClick={logoutHandler} avatar={true} />
       </div>
     </div>
   );

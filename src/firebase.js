@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACzufYAQW2nDqQYoKiB-ic1Cvkz4WBacw",
-  authDomain: "alumni-portal-5fcfd.firebaseapp.com",
-  projectId: "alumni-portal-5fcfd",
-  storageBucket: "alumni-portal-5fcfd.appspot.com",
-  messagingSenderId: "627444099879",
-  appId: "1:627444099879:web:a053e6cb1f8290ae095702"
+  apiKey: "AIzaSyBdEvLmG1CsBhRmVHed-QuQeZKGtYb4ekM",
+  authDomain: "project-test-e8a43.firebaseapp.com",
+  projectId: "project-test-e8a43",
+  storageBucket: "project-test-e8a43.appspot.com",
+  messagingSenderId: "217555975015",
+  appId: "1:217555975015:web:5be7d2990297100f434dc2"
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);

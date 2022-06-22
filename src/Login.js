@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "./features/userSlice";
-import { auth } from "./firebase";
+import { db, auth } from "./firebase";
 import "./Login.css";
 
 const Login = () => {
@@ -10,6 +10,7 @@ const Login = () => {
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
+  
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -43,6 +44,11 @@ const Login = () => {
       await userAuth.user.updateProfile({
         displayName: name,
         photoUrl: profilePic,
+      });
+
+      db.collection("users").add({
+        username: email,
+        pwd: password,
       });
 
       dispatch(
