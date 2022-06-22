@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="app">
       {!user ? (
-        <Login />
+        <Register />
       ) : (
         <>
         <Header />
