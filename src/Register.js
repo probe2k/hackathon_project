@@ -6,6 +6,7 @@ import "./Login.css";
 import ReactDOM from 'react-dom';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
+import Login from "./Login";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const Register = () => {
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
-  
+
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -103,11 +104,11 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit" onClick={registerHandler}>
-          Sign In
-        </button>
+        <span id="work" className="login__register" onClick={registerHandler}>
+          Register Now
+        </span>
       </form>
-{/* 
+      {/* 
 
       <p>
         Not a member?{" "}
@@ -115,6 +116,18 @@ const Register = () => {
           Register Now
         </span>
       </p> */}
+      <p>
+        Already Registered? {""}
+        <button onClick={() => {
+
+          ReactDOM.render(
+            <Provider store={store}>
+              <Login />
+            </Provider>,
+            document.getElementById('root'))
+        }}>Sign In Now</button>
+      </p>
+
 
     </div>
   );

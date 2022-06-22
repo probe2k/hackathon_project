@@ -1,0 +1,71 @@
+[debug] [2022-06-22T10:03:37.543Z] ----------------------------------------------------------------------
+[debug] [2022-06-22T10:03:37.545Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2022-06-22T10:03:37.545Z] CLI Version:   11.1.0
+[debug] [2022-06-22T10:03:37.545Z] Platform:      linux
+[debug] [2022-06-22T10:03:37.545Z] Node Version:  v18.3.0
+[debug] [2022-06-22T10:03:37.546Z] Time:          Wed Jun 22 2022 15:33:37 GMT+0530 (India Standard Time)
+[debug] [2022-06-22T10:03:37.546Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-22T10:03:37.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-22T10:03:37.610Z] > authorizing via signed-in user (kyash054@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/probe/portal
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-06-22T10:03:43.488Z] Using project from CLI flag: project-test-e8a43
+[debug] [2022-06-22T10:03:43.491Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-test-e8a43 [none]
+[debug] [2022-06-22T10:03:43.989Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-test-e8a43 200
+[debug] [2022-06-22T10:03:43.989Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-test-e8a43 {"projectId":"project-test-e8a43","projectNumber":"217555975015","displayName":"project-test","name":"projects/project-test-e8a43","resources":{"hostingSite":"project-test-e8a43","realtimeDatabaseInstance":"project-test-e8a43-default-rtdb","storageBucket":"project-test-e8a43.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] i  Using project project-test-e8a43 (project-test) 
+[info] 
+=== Firestore Setup
+[debug] [2022-06-22T10:03:44.030Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/project-test-e8a43/services/firestore.googleapis.com [none]
+[debug] [2022-06-22T10:03:47.016Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/project-test-e8a43/services/firestore.googleapis.com 200
+[debug] [2022-06-22T10:03:47.017Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/project-test-e8a43/services/firestore.googleapis.com [omitted]
+[debug] [2022-06-22T10:03:47.017Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/project-test-e8a43 [none]
+[debug] [2022-06-22T10:03:47.700Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/project-test-e8a43 200
+[debug] [2022-06-22T10:03:47.700Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/project-test-e8a43 {"name":"apps/project-test-e8a43","id":"project-test-e8a43","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.project-test-e8a43.appspot.com","servingStatus":"SERVING","defaultHostname":"project-test-e8a43.uc.r.appspot.com","defaultBucket":"project-test-e8a43.appspot.com","serviceAccount":"project-test-e8a43@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-06-22T10:03:47.700Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-06-22T10:03:47.701Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-22T10:03:47.702Z] > authorizing via signed-in user (kyash054@gmail.com)
+[debug] [2022-06-22T10:03:47.702Z] [iam] checking project project-test-e8a43 for permissions ["firebase.projects.get"]
+[debug] [2022-06-22T10:03:47.703Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-test-e8a43:testIamPermissions [none]
+[debug] [2022-06-22T10:03:47.703Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-test-e8a43:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-22T10:03:49.022Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-test-e8a43:testIamPermissions 200
+[debug] [2022-06-22T10:03:49.022Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/project-test-e8a43:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 

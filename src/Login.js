@@ -14,7 +14,7 @@ const Login = () => {
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
-
+  
 
   const loginHandler = async (e) => {
     e.preventDefault();
@@ -75,7 +75,7 @@ const Login = () => {
         <span id='alumni'>Alumni</span><span id='dash'>-</span><span id='x'>X</span>
       </div>
       <form>
-        <input
+        {/* <input
           id="name"
           placeholder="Full name (for Registration)"
           type="reg"
@@ -89,7 +89,7 @@ const Login = () => {
           type="text"
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
-        />
+        /> */}
 
         <input
           placeholder="Email"
@@ -108,12 +108,14 @@ const Login = () => {
           Sign In
         </button>
       </form>
-      <p>
+
+
+      {/* <p>
         Not a member?{" "}
         <span className="login__register" onClick={registerHandler}>
           Register Now
         </span>
-      </p>
+      </p> */}
 
     </div>
   );
