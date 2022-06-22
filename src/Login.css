@@ -5,6 +5,23 @@
   padding: 100px 0;
 }
 
+.logo_text {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+#alumni {
+  color: red;
+}
+
+#dash {
+  color: #0074b1;
+}
+
+#x {
+  color: yellow;
+}
+
 .login > form {
   display: flex;
   flex-direction: column;

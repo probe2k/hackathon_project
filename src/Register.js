@@ -6,9 +6,8 @@ import "./Login.css";
 import ReactDOM from 'react-dom';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
-import Register from "./Register";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -34,40 +33,40 @@ const Login = () => {
     }
   };
 
-  // const registerHandler = async () => {
-  //   if (!name) {
-  //     return alert("Please enter a full name!");
-  //   }
+  const registerHandler = async () => {
+    if (!name) {
+      return alert("Please enter a full name!");
+    }
 
-  //   try {
-  //     const userAuth = await auth.createUserWithEmailAndPassword(
-  //       email,
-  //       password
-  //     );
+    try {
+      const userAuth = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
 
-  //     await userAuth.user.updateProfile({
-  //       displayName: name,
-  //       photoUrl: profilePic,
-  //     });
+      await userAuth.user.updateProfile({
+        displayName: name,
+        photoUrl: profilePic,
+      });
 
-  //     db.collection("users").add({
-  //       username: email,
-  //       pwd: password,
-  //     });
+      db.collection("users").add({
+        username: email,
+        pwd: password,
+      });
 
-  //     dispatch(
-  //       login({
-  //         email: userAuth.user.email,
-  //         uid: userAuth.user.uid,
-  //         displayName: name,
-  //         photoUrl: profilePic,
-  //       })
-  //     );
-  //   } catch (error) {
-  //     console.log(error);
-  //     alert(error);
-  //   }
-  // };
+      dispatch(
+        login({
+          email: userAuth.user.email,
+          uid: userAuth.user.uid,
+          displayName: name,
+          photoUrl: profilePic,
+        })
+      );
+    } catch (error) {
+      console.log(error);
+      alert(error);
+    }
+  };
 
   return (
     <div className="login">
@@ -75,7 +74,7 @@ const Login = () => {
         <span id='alumni'>Alumni</span><span id='dash'>-</span><span id='x'>X</span>
       </div>
       <form>
-        {/* <input
+        <input
           id="name"
           placeholder="Full name (for Registration)"
           type="reg"
@@ -89,7 +88,7 @@ const Login = () => {
           type="text"
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
-        /> */}
+        />
 
         <input
           placeholder="Email"
@@ -104,7 +103,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit" onClick={loginHandler}>
+        <button type="submit" onClick={registerHandler}>
           Sign In
         </button>
       </form>
@@ -121,4 +120,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
